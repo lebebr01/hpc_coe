@@ -29,6 +29,6 @@
 module load R/3.5.1
 
 #R script file
-Rscript ~/real_ex2/R/plot_icc_math.r 
+Rscript ~/hpc_coe/real_ex2/R/plot_icc_math.r 
 
 

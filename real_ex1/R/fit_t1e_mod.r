@@ -5,7 +5,7 @@ library(broom)
 library(xtable)
 
 # read in data
-type1error <- read_csv("~/real_ex1/data/type1errors.csv")
+type1error <- read_csv("~/hpc_coe/real_ex1/data/type1errors.csv")
 
 # Logistic Regression
 mod_t1e_log <- glm(t1e ~ (factor(n)+factor(p)+rand.dist+gensercor+fitcorstr+Term)^3,
@@ -23,4 +23,4 @@ etaCombI.xt <- xtable(log_est, digits = 4,
                       caption = "Parameter estimates")
 print(etaCombI.xt, booktabs=TRUE, floating=FALSE,include.rownames=FALSE,
       tabular.environment = "longtable", caption.placement="top",
-      file = "~/real_ex1/table/log_t1e.tex")
+      file = "~/hpc_coe/real_ex1/table/log_t1e.tex")

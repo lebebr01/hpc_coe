@@ -29,6 +29,6 @@
 module load R/3.5.1
 
 #R script file
-Rscript ~/real_ex1/R/fit_t1e_mod.r 
+Rscript ~/hpc_coe/real_ex1/R/fit_t1e_mod.r 
 
 

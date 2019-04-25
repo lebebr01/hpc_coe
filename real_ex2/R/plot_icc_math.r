@@ -1,8 +1,9 @@
 # Setup -----
 # packages
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 
-filenames <- list.files(path = "~/real_ex2/data", 
+filenames <- list.files(path = "~/hpc_coe/real_ex2/data", 
                         pattern = "icc_info_math_nose",
                         full.names = TRUE)
 
@@ -33,7 +34,7 @@ for(j in seq_along(filenames)) {
       labs(title = label_title) +
       theme_bw()
     ggsave(filename = paste0(paste(conditions[i, ], collapse = "_"), ".png"), plot = p,
-           path = "~/real_ex2/images/icc",
+           path = "~/hpc_coe/real_ex2/images/icc",
            width = 6, height = 4, dpi = 320, units = 'in')
   }
   
@@ -59,7 +60,7 @@ for(j in seq_along(filenames)) {
       labs(title = label_title) +
       theme_bw()
     ggsave(filename = paste0(paste(conditions[i, ], collapse = "_"), ".png"), plot = p,
-           path = "/Users/bleb/timss/images/tcc",
+           path = "~/hpc_coe/real_ex2/images/tcc",
            width = 6, height = 4, dpi = 320, units = 'in')
     
     # Information
@@ -71,7 +72,7 @@ for(j in seq_along(filenames)) {
       labs(title = label_title) +
       theme_bw()
     ggsave(filename = paste0(paste(conditions[i, ], collapse = "_"), ".png"), plot = p,
-           path = "/Users/bleb/timss/images/information",
+           path = "~/hpc_coe/real_ex2/images/information",
            width = 6, height = 4, dpi = 320, units = 'in')
     
     # SEE
@@ -83,7 +84,7 @@ for(j in seq_along(filenames)) {
       labs(title = label_title) +
       theme_bw()
     ggsave(filename = paste0(paste(conditions[i, ], collapse = "_"), ".png"), plot = p,
-           path = "/Users/bleb/timss/images/see",
+           path = "~/hpc_coe/real_ex2/images/see",
            width = 6, height = 4, dpi = 320, units = 'in')
     
   }
